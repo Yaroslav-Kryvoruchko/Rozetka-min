@@ -50,7 +50,7 @@ body {
     position: fixed;
     display: flex;
     flex-direction: column;
-    top: 20%;
+    top: 30%;
     left: 30%;
     width: 40%;
     align-items: flex-start;
@@ -61,7 +61,7 @@ body {
     border-radius: 1rem;
     z-index: 30;
     opacity: 0;
-    transform: translateY(-10%);
+    transform: scale(0.5);
     transition: transform 0.2s ease-out;
 }
 
@@ -268,19 +268,276 @@ body {
     margin-right: 3rem;
 }
 
-.open {
-    display: block !important;
-    opacity: 1 !important;
-    transform: translateY(0) !important;
-}
-
 .city {
     position: fixed;
     display: flex;
     flex-direction: column;
-    top: 20%;
-    left: 35%;
+    top: 30%;
+    left: 30%;
     width: 40%;
     z-index: 50;
-    border: 2px solid red;
+    border-radius: 1rem;
+    background: #729B79;
+    opacity: 0;
+    transform: scale(0.5);
+    transition: transform 0.2s ease;
+}
+
+.city__button {
+    background: none;
+    border: none;
+    color: #F3E8EE;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.city__button:focus {
+    outline: none;
+}
+
+.city__button:hover,
+.city__button:active {
+    color: #BACDB0;
+}
+
+.main-title {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin: 0.5rem 0 0 1rem;
+}
+
+.paragraph__up {
+    margin: 1rem 0 0.5rem 1rem;
+}
+
+.main-list__city {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0;
+}
+
+.list__city {
+    margin: 0;
+    padding: 0;
+}
+
+.list__city a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.1rem;
+}
+
+.list__city a:hover,
+.list__city a:active {
+    color: #F3E8EE;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    margin: 0.5rem 1rem;
+    padding: 0;
+}
+
+.input__up {
+    font-size: 0.8rem;
+}
+
+.input__city input {
+    margin-top: 0.2rem;
+    padding: 0.2rem 9rem 0.2rem 0;
+}
+
+.paragraph__down {
+    padding: 0;
+    margin: 0.5rem 1rem;
+    font-size: 1.1rem;
+}
+
+.paragraph__down a {
+    color: black;
+}
+
+.city__line {
+    width: 90%;
+    border: 0.3px solid black;
+    background: black;
+}
+
+.paragraph__down__two {
+    font-size: 0.9rem;
+    width: 70%;
+    margin: 0.5rem 1rem;
+}
+
+.sign_in {
+    position: fixed;
+    display: flex;
+    top: 30%;
+    left: 29%;
+    width: 42%;
+    height: 40%;
+    z-index: 50;
+    border-radius: 1rem;
+    padding-left: 0.5rem;
+    background: #729B79;
+    opacity: 0;
+    transform: scale(0.5);
+    transition: transform 0.2s ease-out;
+}
+
+.rigth-sign_in__button {
+    background: none;
+    border: none;
+    font-size: 0.9rem;
+    color: #F3E8EE;
+    cursor: pointer;
+}
+
+.rigth-sign_in__button:hover {
+    color: #BACDB0;
+}
+
+.rigth-sign_in__button:focus {
+    outline: none;
+}
+
+.sign_in__left {
+    display: flex;
+    flex-direction: column;
+}
+
+.sign_in__left label {
+    font-size: 0.9rem;
+}
+
+.sign_in__title__left {
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+#email {
+    padding: 0.5rem 8rem 0.5rem 0.5rem;
+    border: 1px solid black;
+    border-radius: 0.3rem;
+    margin: 0 0 1rem 0;
+    background: #F3E8EE;
+}
+
+#password {
+    padding: 0.5rem 8rem 0.5rem 0.5rem;
+    border: 1px solid black;
+    border-radius: 0.3rem;
+    background: #F3E8EE;
+}
+
+input:focus {
+    outline: none;
+}
+
+.sign_in__checkbox {
+    display: flex;
+    align-items: center;
+    margin: 0.5rem 0;
+}
+
+.sign_in__checkbox label {
+    font-size: 1rem;
+}
+
+.sign_in__button {
+    padding: 0.5rem 0;
+    font-size: 1.2rem;
+    background: #BACDB0;
+    border: 1px solid #BACDB0;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+.sign_in__button:focus {
+    outline: none;
+}
+
+.sign_in__button:hover,
+.sign_in__button:active {
+    background: #d3e9c7;
+}
+
+.sign_in__reg {
+    margin-top: 1rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.sign_in__reg:hover {
+    color: #F3E8EE;
+}
+
+.sign_in__reg:focus {
+    outline: none;
+}
+
+.sign_in__center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.sign_in__line {
+    transform: rotateZ(90deg);
+    border: 0.1px solid black;
+    background: black;
+    width: 5rem;
+    margin: 2.5rem 0;
+}
+
+.sing_in_rigth {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sign_in__title__rigth {
+    font-size: 1rem;
+    margin-top: 3rem;
+}
+
+.sign_in__button__facebook {
+    padding: 0.5rem 3rem;
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+    border-radius: 0.3rem;
+    border: 2px solid #F3E8EE;
+    background: #F3E8EE;
+}
+
+.sign_in__button__google {
+    padding: 0.5rem 3.5rem;
+    font-size: 1rem;
+    border-radius: 0.3rem;
+    border: 2px solid #F3E8EE;
+    background: #F3E8EE;
+}
+
+.sign_in__button__facebook:focus,
+.sign_in__button__google:focus {
+    outline: none;
+}
+
+.sign_in__button__facebook:hover,
+.sign_in__button__google:hover {
+    color: #292727;
+}
+
+.open {
+    display: flex !important;
+    opacity: 1 !important;
+    transform: scale(1) !important;
+    transform: translateY(0) !important;
 }
