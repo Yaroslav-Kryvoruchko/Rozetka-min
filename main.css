@@ -18,16 +18,66 @@ body {
 }
 
 .catalog__menu {
-    position: relative;
+    position: fixed;
     transform: translateY(-5%);
     opacity: 0;
-    width: 95%;
+    left: 5%;
+    width: 90%;
     height: 550px;
     margin: 0 auto;
-    z-index: 20;
     background: white;
     transition: transform 0.4s ease,
                 opacity 0.2s ease;
+} 
+
+/*.main-catalog {
+
+}*/
+
+.main-catalog__items {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    list-style: none;
+    padding: 1rem 1rem;
+}
+
+.main-catalog__item {
+    padding-bottom: 1rem;
+    color: black;
+    transform: translateX(0);
+    transition: transform 0.1s ease-out;
+}
+
+.main-catalog__item a {
+    text-decoration: none;
+    color: black;
+}
+
+.pc {
+    transform: translateX(0);
+    transition: transform 0.1s ease-out;
+}
+
+.pc:hover{
+    transform: translateX(5%);
+}
+
+.rigth__menu {
+    opacity: 0;
+    padding-left: 5rem;
+}
+
+ul li:hover > ul,
+.rigth__menu:hover {
+    opacity: 1;
+}
+
+.catalog__item__pc {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
 
 .number {
@@ -59,7 +109,6 @@ body {
     margin: 0 auto;
     background: #729B79;
     border-radius: 1rem;
-    z-index: 30;
     opacity: 0;
     transform: scale(0.5);
     transition: transform 0.2s ease-out;
@@ -268,6 +317,78 @@ body {
     margin-right: 3rem;
 }
 
+.down__rigth button {
+    background: none;
+    border: none;
+}
+
+.down__rigth button:focus {
+    outline: none;
+}
+
+.down__right__down {
+    position: fixed;
+    width: 500px;
+    height: 120px;
+    right: 10%;
+    background: #F3E8EE;
+    box-shadow: 2px 2px 5px black;
+    opacity: 0;
+    transform: translateY(-5%);
+    transition: transform 0.2s ease-out,
+                opacity 0.2s ease-in;
+}
+
+.down__right__down__two {
+    position: fixed;
+    width: 500px;
+    height: 120px;
+    right: 5%;
+    background: #F3E8EE;
+    box-shadow: 2px 2px 5px black;
+    opacity: 0;
+    transform: translateY(-5%);
+    transition: transform 0.2s ease-out,
+                opacity 0.2s ease-in;
+}
+
+.down__right__down__tree {
+    position: fixed;
+    width: 500px;
+    height: 120px;
+    right: 0;
+    background: #F3E8EE;
+    box-shadow: 2px 2px 5px black;
+    opacity: 0;
+    transform: translateY(-5%);
+    transition: transform 0.2s ease-out,
+                opacity 0.2s ease-in;
+}
+
+.down__right__down__items {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.down__right__down__item img {
+    width: 50px;
+    height: 50px;
+    margin-right: 1.5rem;
+}
+
+.down--right__down__item h5 {
+    font-size: 1.2rem;
+    margin-bottom: 0.1rem;
+}
+
+.down--right__down__item p {
+    font-size: 0.9rem;
+}
+
 .city {
     position: fixed;
     display: flex;
@@ -275,7 +396,6 @@ body {
     top: 30%;
     left: 30%;
     width: 40%;
-    z-index: 50;
     border-radius: 1rem;
     background: #729B79;
     opacity: 0;
@@ -380,7 +500,6 @@ body {
     left: 29%;
     width: 42%;
     height: 40%;
-    z-index: 50;
     border-radius: 1rem;
     padding-left: 0.5rem;
     background: #729B79;
@@ -533,6 +652,183 @@ input:focus {
 .sign_in__button__facebook:hover,
 .sign_in__button__google:hover {
     color: #292727;
+    cursor: pointer;
+}
+
+.check_in {
+    position: fixed;
+    display: flex;
+    top: 20%;
+    left: 19%;
+    width: 60%;
+    height: 70%;
+    border-radius: 1rem;
+    padding-left: 0.5rem;
+    background: #729B79;
+    opacity: 0;
+    transform: scale(0.5);
+    transition: transform 0.2s ease-out;
+}
+
+.check_in__left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 60%;
+}
+
+.check_in__left__items {
+    list-style: none;
+    padding: 0;
+}
+
+.left--item {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+}
+
+.left--item h4 {
+    font-size: 2.5rem;
+    margin: 0.5rem 1rem;
+}
+
+.left--item label {
+    font-size: 0.9rem;
+}
+
+.left--item input {
+    width: 80%;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    border-radius: 0.3rem;
+    border: 1px solid black;
+}
+
+#password__check_in {
+    width: 70%;
+    
+}
+
+.password__check_in {
+  display: flex;
+  width: 100%;
+  vertical-align: middle;
+}
+
+.password__check_in button {
+    width: 30px;
+    height: 40px;
+    vertical-align: middle;
+}
+
+.eye__button {
+    border: none;
+    background: none;
+}
+
+.eye__button img {
+    width: 20px;
+    height: 20px;
+}
+
+.eye__button:focus {
+    outline: none;
+}
+
+.left__item p {
+    width: 75%;
+    margin-top: 0;
+}
+
+.check_in__buttom {
+    width: 70%;
+    margin: 0.5rem 1rem;
+    padding: 1rem 1rem;
+    font-size: 1.2rem;
+    border-radius: 0.3rem;
+    border: none;
+    background: #BACDB0;
+}
+
+.check_in__buttom:hover {
+    background: #a0b496;
+    cursor: pointer;
+} 
+
+.check_in__buttom__two {
+    width: 35%;
+    margin: 0.5rem 7rem;
+    background: none;
+    border: none;
+}
+
+.check_in__buttom__two:focus,
+.check_in__buttom:focus {
+    outline: none;
+}   
+
+.check_in__buttom__two:hover {
+    color: #F3E8EE;
+    cursor: pointer;
+}
+
+.check_in__center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.check_in__center__line {
+    height: 13rem;
+    transform: rotateZ(180deg);
+    margin: 0.2rem 0;
+    border: 0.5px solid black;
+    background: black;
+}
+
+.check_in__rigth {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0 auto;
+}
+
+.check_in__title__rigth {
+    font-size: 1.5rem;
+    margin-top: 7rem;
+}
+
+.check_in__button__facebook {
+    padding: 1rem 4rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+    border-radius: 0.3rem;
+    border: 2px solid #F3E8EE;
+    background: #F3E8EE;
+}
+
+.check_in__button__google {
+    padding: 1rem 4.5rem;
+    font-size: 1.2rem;
+    border-radius: 0.3rem;
+    border: 2px solid #F3E8EE;
+    background: #F3E8EE;
+}
+
+.check_in__button__facebook:focus,
+.check_in__button__google:focus {
+    outline: none;
+}
+
+.check_in__button__facebook:hover,
+.check_in__button__google:hover {
+    color: #292727;
+    cursor: pointer;
 }
 
 .open {
