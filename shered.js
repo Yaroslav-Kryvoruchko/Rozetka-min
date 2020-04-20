@@ -16,6 +16,10 @@ var SignInMenu = document.querySelector(".sign_in")
 var CheckInButton = document.querySelector(".sign_in__reg")
 var CheckIn = document.querySelector(".check_in")
 var CheckInBackButton = document.querySelector(".check_in__buttom__two")
+var CatalogOne = document.querySelector("#catalog__one")
+var CatalogTwo = document.querySelector("#catalog__two")
+var CatalogOneMenu = document.querySelector(".main-catalog__menu__pc")
+var CatalogTwoMenu = document.querySelector(".main-catalog__menu__sp")
 
 
 OpenButtonCatalog.addEventListener('click', function(){
@@ -23,7 +27,8 @@ OpenButtonCatalog.addEventListener('click', function(){
     BlackDrop.style.top = "8.1rem"
     CatalogMenu.classList.add("open");
     CatalogMenu.style.zIndex = "30"
-
+    CatalogOneMenu.classList.add("open")
+    CatalogOneMenu.style.zIndex = "30"
 })
 
 BlackDrop.addEventListener("click", function() {
@@ -38,6 +43,10 @@ BlackDrop.addEventListener("click", function() {
     MenuIconLibra.classList.remove("open")
     MenuIconLike.classList.remove("open")
     MenuIconShop.classList.remove("open")
+    CatalogOneMenu.classList.remove("open")
+    CatalogTwoMenu.classList.remove("open")
+    CatalogTwoMenu.style.zIndex = "-1"
+    CatalogOneMenu.style.zIndex = "-1"
     MenuIconShop.style.zIndex = "-1"
     MenuIconLike.style.zIndex = "-1"
     CheckIn.style.zIndex = "-1"
@@ -83,25 +92,47 @@ CheckInBackButton.addEventListener("click", function(){
     SignInMenu.style.zIndex = "30"
 })
 
-IconLibra.addEventListener("click", function() {
+IconLibra.addEventListener("mouseover", function() {
     MenuIconLibra.classList.add("open")
     MenuIconLibra.style.zIndex = "30"
-    BlackDrop.classList.add("open")
-    BlackDrop.style.zIndex = "20"
 })
 
-IconLike.addEventListener("click", function() {
+IconLike.addEventListener("mouseover", function() {
     MenuIconLike.classList.add("open")
     MenuIconLike.style.zIndex = "30"
-    BlackDrop.classList.add("open")
-    BlackDrop.style.zIndex = "20"
 })
 
-IconShop.addEventListener("click", function() {
+IconShop.addEventListener("mouseover", function() {
     MenuIconShop.classList.add("open")
     MenuIconShop.style.zIndex = "30"
-    BlackDrop.classList.add("open")
-    BlackDrop.style.zIndex = "20"
 })
+
+IconLibra.addEventListener("mouseout", function() {
+    MenuIconLibra.classList.remove("open")
+    MenuIconLibra.style.zIndex = "-1"
+})
+
+IconLike.addEventListener("mouseout", function() {
+    MenuIconLike.classList.remove("open")
+    MenuIconLike.style.zIndex = "-1"
+})
+
+IconShop.addEventListener("mouseout", function() {
+    MenuIconShop.classList.remove("open")
+    MenuIconShop.style.zIndex = "-1"
+})
+
+CatalogOne.addEventListener("mouseover", function() {
+    CatalogOneMenu.classList.add("open")
+    CatalogOneMenu.style.zIndex = "30"
+    CatalogTwoMenu.classList.remove("open")
+    CatalogTwoMenu.style.zIndex = "-1"
+})
+
+CatalogTwo.addEventListener("mouseover", function() {
+    CatalogTwoMenu.classList.add("open")
+    CatalogTwoMenu.style.zIndex = "30"
+})
+
 
 
